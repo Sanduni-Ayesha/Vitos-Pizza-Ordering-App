@@ -1,0 +1,16 @@
+.card {
+  max-width: 300px;
+  margin-bottom: 50px;
+  float: left;
+  padding: 10px;
+}
+
+.order-confirm {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.pizza-types {
+  padding: 10px;
+}
