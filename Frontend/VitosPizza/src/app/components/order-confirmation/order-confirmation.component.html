@@ -1,1 +1,19 @@
-<p>order-confirmation works!</p>
+<div>
+  <table class="order-table">
+    <tr>
+      <th>Pizza name</th>
+      <th>Category</th>
+      <th>Ordered amount</th>
+      <th>Price</th>
+      <th>Total</th>
+    </tr>
+
+    <tr *ngFor="let order of orders">
+      <td>{{order.name}}</td>
+      <td>{{order.category}}</td>
+      <td>{{order.ordered_amount}}</td>
+      <td>{{order.price}}</td>
+      <td>{{order.price*order.ordered_amount}}</td>
+    </tr>
+  </table>
+</div>

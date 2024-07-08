@@ -19,6 +19,7 @@ import {MatLabel} from "@angular/material/form-field";
 import {MatTab, MatTabGroup, MatTabLabel} from "@angular/material/tabs";
 import {MatButton} from "@angular/material/button";
 import {MatDivider} from "@angular/material/divider";
+import {MatCell, MatCellDef, MatColumnDef, MatHeaderCell, MatTable} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -43,7 +44,12 @@ import {MatDivider} from "@angular/material/divider";
     MatTabLabel,
     MatButton,
     MatDivider,
-    MatCardImage
+    MatCardImage,
+    MatTable,
+    MatColumnDef,
+    MatHeaderCell,
+    MatCell,
+    MatCellDef
   ],
   providers: [
     provideClientHydration()

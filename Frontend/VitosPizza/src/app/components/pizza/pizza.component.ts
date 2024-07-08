@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {Pizza} from "../../model/pizza";
+import {OrderDataService} from "../../services/order-data/order-data.service";
 
 const categories: string[] = ["Veg", "Non-veg"];
 const pizza = [
@@ -38,19 +39,19 @@ const pizza = [
 })
 
 export class PizzaComponent {
-  amount: number = 1;
   protected readonly categories = categories;
   cartItems: Pizza[] = [];
   pizzaList = pizza;
 
+  constructor(private orderDataService: OrderDataService) {
+  }
+
   increment(item: Pizza) {
     item.ordered_amount = item.ordered_amount + 1
-    console.log(this.amount)
   }
 
   decrement(item: Pizza) {
     item.ordered_amount = item.ordered_amount + 1
-    console.log(this.amount)
   }
 
   addToCart(cartItem: Pizza) {
@@ -59,7 +60,8 @@ export class PizzaComponent {
   }
 
   viewCart() {
-    console.log(this.cartItems);
+    this.orderDataService.orderList = this.cartItems;
+    console.log("View Cart items",this.cartItems);
     return this.cartItems;
   }
 }

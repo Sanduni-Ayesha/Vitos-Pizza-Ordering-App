@@ -1,0 +1,18 @@
+/* General table styling */
+.order-table {
+  width: 90%;
+  margin: 5%;
+}
+
+/* Header styling */
+.order-table th{
+  background-color: darkblue;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.order-table th, .order-table td {
+  padding: 12px 15px;
+  border: 1px solid darkblue;
+}
