@@ -1,0 +1,13 @@
+.payment-confirmation{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: lightblue;
+  width: 70%;
+
+}
+
+#label{
+  padding: 20px;
+  margin: 20px;
+}

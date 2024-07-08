@@ -1,0 +1,43 @@
+<div class="payment-confirmation">
+  <div>
+    Confirm the details below for confirmation of the order
+  </div>
+  <br>
+  <div>
+    <form [formGroup]="paymentForm">
+      <label>Total amount</label>
+      <br>
+      {{total}}
+      <br>
+      <label>Payment type</label>
+      <br>
+      <mat-radio-group formControlName="paymentMethod" aria-label="Payment options">
+        <mat-radio-button value="card">Card payment</mat-radio-button>
+        <mat-radio-button value="cash">Cash on delivery</mat-radio-button>
+      </mat-radio-group>
+      <div *ngIf="paymentForm.get('paymentMethod')?.value == 'card'">
+        <br>
+        <label>Enter Card Number</label>
+        <br>
+        <input id="card-number" type="number" formControlName="cardNumber">
+        <br>
+        <label>Enter 3 digit code</label>
+        <br>
+        <input id="code" type="number" formControlName="code">
+        <br>
+        <label>Expiry date</label>
+        <br>
+        <input id="expiry-date" type="date" formControlName="expiry">
+      </div>
+      <br>
+      Address Confirmation
+      <br>
+      Address
+    </form>
+  </div>
+  <br>
+  <div class="confirm">
+    <button mat-button class="confirm" routerLink="/" (click)="confirmation()"> Confirm Payment</button>
+  </div>
+
+</div>

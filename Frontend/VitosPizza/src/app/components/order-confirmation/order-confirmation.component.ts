@@ -26,6 +26,6 @@ export class OrderConfirmationComponent implements OnInit{
   }
 
   confirmPayment() {
-
+    this.orderDataService.totalCost = this.total;
   }
 }
