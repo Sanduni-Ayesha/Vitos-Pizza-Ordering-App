@@ -51,7 +51,7 @@ export class PizzaComponent {
   }
 
   decrement(item: Pizza) {
-    item.ordered_amount = item.ordered_amount + 1
+    item.ordered_amount = item.ordered_amount - 1
   }
 
   addToCart(cartItem: Pizza) {

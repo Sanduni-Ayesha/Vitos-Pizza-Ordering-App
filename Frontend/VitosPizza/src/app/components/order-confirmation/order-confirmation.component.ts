@@ -12,11 +12,20 @@ export class OrderConfirmationComponent implements OnInit{
   }
 
   orders:Pizza[] =[];
+  total:number = 0;
 
   ngOnInit(){
     this.orders = this.orderDataService.orderList
-    console.log(this.orders)
+    this.getTotal();
   }
 
+  getTotal() {
+    for (const element of this.orders) {
+      this.total += element.ordered_amount * element.price;
+    }
+  }
 
+  confirmPayment() {
+
+  }
 }

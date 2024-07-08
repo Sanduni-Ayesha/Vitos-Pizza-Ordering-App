@@ -16,3 +16,9 @@
   padding: 12px 15px;
   border: 1px solid darkblue;
 }
+
+.order-confirm {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}

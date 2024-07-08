@@ -15,5 +15,18 @@
       <td>{{order.price}}</td>
       <td>{{order.price*order.ordered_amount}}</td>
     </tr>
+
+    <tr>
+      <td>Total</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>{{total}}</td>
+    </tr>
   </table>
+
+  <div class="order-confirm">
+    <button mat-button class="cart-view" routerLink="/payment" (click)="confirmPayment()"> Confirm Payment</button>
+  </div>
+
 </div>
