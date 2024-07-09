@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule, provideClientHydration} from '@angular/platform-browser';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -20,6 +21,11 @@ import {MatTab, MatTabGroup, MatTabLabel} from "@angular/material/tabs";
 import {MatButton} from "@angular/material/button";
 import {MatDivider} from "@angular/material/divider";
 import {MatCell, MatCellDef, MatColumnDef, MatHeaderCell, MatTable} from "@angular/material/table";
+import { PaymentPortalComponent } from './components/payment-portal/payment-portal.component';
+import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatToolbar, MatToolbarRow} from "@angular/material/toolbar";
+import {MatIcon} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -27,7 +33,8 @@ import {MatCell, MatCellDef, MatColumnDef, MatHeaderCell, MatTable} from "@angul
     NavBarComponent,
     OrderConfirmationComponent,
     PizzaComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
+    PaymentPortalComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +56,14 @@ import {MatCell, MatCellDef, MatColumnDef, MatHeaderCell, MatTable} from "@angul
     MatColumnDef,
     MatHeaderCell,
     MatCell,
-    MatCellDef
+    MatCellDef,
+    MatRadioGroup,
+    MatRadioButton,
+    ReactiveFormsModule,
+    NoopAnimationsModule,
+    MatToolbarRow,
+    MatIcon,
+    MatToolbar
   ],
   providers: [
     provideClientHydration()

@@ -6,5 +6,6 @@ import {Pizza} from "../../model/pizza";
 })
 export class OrderDataService {
   public orderList:Pizza[]=[];
+  public totalCost:number=0;
   constructor() { }
 }
