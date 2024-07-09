@@ -2,7 +2,8 @@
 <a class="Header" routerLink="/">Vito's Pizza</a>
   <span class="space"></span>
   <nav class="tabs">
-    <a class="tab" routerLink="/register" routerLinkActive="register">Sign Up</a>
-    <a class="tab" routerLink="/signin" routerLinkActive="signup">Sign In</a>
+    <a *ngIf="!userLoggedIn" class="tab" routerLink="/register" routerLinkActive="register" (click)="registerUser()">Register</a>
+    <a *ngIf="userLoggedIn" class="tab" routerLink="/pizza" routerLinkActive="logout">Log out</a>
+    <a *ngIf="!userLoggedIn" class="tab" routerLink="/register" routerLinkActive="register">Sign In</a>
   </nav>
 </mat-toolbar>
