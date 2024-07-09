@@ -80,6 +80,9 @@ export class PizzaComponent {
   pizzaList = pizza;
 
   constructor(private orderDataService: OrderDataService) {
+    this.cartItems = this.orderDataService.orderList && this.orderDataService.orderList.length > 0
+      ? this.orderDataService.orderList
+      : [];
   }
 
   increment(item: Pizza) {
