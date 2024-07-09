@@ -2,10 +2,10 @@ import {Component} from '@angular/core';
 import {Pizza} from "../../model/pizza";
 import {OrderDataService} from "../../services/order-data/order-data.service";
 
-const categories: string[] = ["Veg", "Non-veg"];
+const categories: string[] = ["veg", "non-veg"];
 const pizza = [
   new Pizza(1,
-    "Pizza",
+    "Pizza 1",
     "A delicious pizza with a thin crust with selected best quality toppings. Hand made with love and flavour.",
     "veg",
     "https://th.bing.com/th/id/OIP.8UeIFPMYwIErE1ShRYB9QAHaEo?rs=1&pid=ImgDetMain",
@@ -14,7 +14,7 @@ const pizza = [
     0),
 
   new Pizza(2,
-    "Pizza",
+    "Pizza 2",
     "A delicious pizza with a thin crust with selected best quality toppings. Hand made with love and flavour.",
     "veg",
     "https://th.bing.com/th/id/OIP.8UeIFPMYwIErE1ShRYB9QAHaEo?rs=1&pid=ImgDetMain",
@@ -23,11 +23,47 @@ const pizza = [
     0),
 
   new Pizza(3,
-    "Pizza",
+    "Pizza 3",
     "A delicious pizza with a thin crust with selected best quality toppings. Hand made with love and flavour.",
     "veg",
     "https://th.bing.com/th/id/OIP.8UeIFPMYwIErE1ShRYB9QAHaEo?rs=1&pid=ImgDetMain",
     900,
+    5,
+    0),
+
+  new Pizza(4,
+    "Pizza 4",
+    "A delicious pizza with a thin crust with selected best quality toppings. Hand made with love and flavour.",
+    "non-veg",
+    "https://th.bing.com/th/id/OIP.8UeIFPMYwIErE1ShRYB9QAHaEo?rs=1&pid=ImgDetMain",
+    1900,
+    5,
+    0),
+
+  new Pizza(5,
+    "Pizza 5",
+    "A delicious pizza with a thin crust with selected best quality toppings. Hand made with love and flavour.",
+    "non-veg",
+    "https://th.bing.com/th/id/OIP.8UeIFPMYwIErE1ShRYB9QAHaEo?rs=1&pid=ImgDetMain",
+    700,
+    5,
+    0),
+
+  new Pizza(6,
+    "Pizza 6",
+    "A delicious pizza with a thin crust with selected best quality toppings. Hand made with love and flavour.",
+    "veg",
+    "https://th.bing.com/th/id/OIP.8UeIFPMYwIErE1ShRYB9QAHaEo?rs=1&pid=ImgDetMain",
+    1200,
+    5,
+    0),
+
+  new Pizza(7,
+    "Pizza 7",
+    "A delicious pizza with a thin crust with selected best quality toppings. Hand made with love and flavour.",
+    "non-veg",
+    "https://th.bing.com/th/id/OIP.8UeIFPMYwIErE1ShRYB9QAHaEo?rs=1&pid=ImgDetMain",
+    780,
     5,
     0),
 ]
