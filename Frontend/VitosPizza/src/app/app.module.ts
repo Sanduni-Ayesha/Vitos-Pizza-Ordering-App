@@ -16,7 +16,7 @@ import {
   MatCardSubtitle,
   MatCardTitle
 } from "@angular/material/card";
-import {MatLabel} from "@angular/material/form-field";
+import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatTab, MatTabGroup, MatTabLabel} from "@angular/material/tabs";
 import {MatButton} from "@angular/material/button";
 import {MatDivider} from "@angular/material/divider";
@@ -26,6 +26,8 @@ import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatToolbar, MatToolbarRow} from "@angular/material/toolbar";
 import {MatIcon} from "@angular/material/icon";
+import {MatInput} from "@angular/material/input";
+import {MatDatepicker, MatDatepickerInput, MatDatepickerToggle} from "@angular/material/datepicker";
 
 @NgModule({
   declarations: [
@@ -63,7 +65,12 @@ import {MatIcon} from "@angular/material/icon";
     NoopAnimationsModule,
     MatToolbarRow,
     MatIcon,
-    MatToolbar
+    MatToolbar,
+    MatInput,
+    MatFormField,
+    MatDatepickerInput,
+    MatDatepickerToggle,
+    MatDatepicker
   ],
   providers: [
     provideClientHydration()

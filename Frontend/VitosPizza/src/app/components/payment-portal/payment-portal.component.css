@@ -1,13 +1,24 @@
 .payment-confirmation{
   padding: 20px;
-  display: flex;
   justify-content: center;
   background-color: lightblue;
-  width: 70%;
-
+  width: 30%;
+  margin: 20px 30% 20px 30%
 }
 
 #label{
   padding: 20px;
   margin: 20px;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-full-width {
+  width: 100%;
 }

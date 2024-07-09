@@ -1,15 +1,16 @@
 <div class="payment-confirmation">
   <div>
-    Confirm the details below for confirmation of the order
+    Confirm the details below for confirmation of the order.
   </div>
   <br>
   <div>
     <form [formGroup]="paymentForm">
-      <label>Total amount</label>
+      <mat-form-field class="full-width">
+        <mat-label>Total Amount</mat-label>
+        <input matInput disabled value="{{total}}">
+      </mat-form-field>
       <br>
-      {{total}}
-      <br>
-      <label>Payment type</label>
+      <mat-label>Payment type</mat-label>
       <br>
       <mat-radio-group formControlName="paymentMethod" aria-label="Payment options">
         <mat-radio-button value="card">Card payment</mat-radio-button>
@@ -17,22 +18,28 @@
       </mat-radio-group>
       <div *ngIf="paymentForm.get('paymentMethod')?.value == 'card'">
         <br>
-        <label>Enter Card Number</label>
+        <mat-form-field class="full-width">
+          <mat-label>Card Number</mat-label>
+          <input matInput>
+        </mat-form-field>
         <br>
-        <input id="card-number" type="number" formControlName="cardNumber">
+        <mat-form-field class="full-width">
+          <mat-label>3 digit code</mat-label>
+          <input matInput>
+        </mat-form-field>
         <br>
-        <label>Enter 3 digit code</label>
-        <br>
-        <input id="code" type="number" formControlName="code">
-        <br>
-        <label>Expiry date</label>
-        <br>
-        <input id="expiry-date" type="date" formControlName="expiry">
+        <mat-form-field class="full-width">
+          <mat-label>Choose a date</mat-label>
+          <input matInput id="expiry-date" type="date" formControlName="expiry">
+<!--          <input matInput [matDatepicker]="picker">-->
+<!--          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>-->
+<!--          <mat-datepicker #picker></mat-datepicker>-->
+        </mat-form-field>
       </div>
-      <br>
-      Address Confirmation
-      <br>
-      Address
+      <mat-form-field class="full-width">
+        <mat-label>Address</mat-label>
+        <input matInput value="Address">
+      </mat-form-field>
     </form>
   </div>
   <br>
