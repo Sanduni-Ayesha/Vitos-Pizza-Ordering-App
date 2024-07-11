@@ -1,2 +1,6 @@
-package com.vitos.pizza.model;public enum TransactionType {
+package com.vitos.pizza.model;
+
+public enum TransactionType {
+    COD,
+    CARD
 }
