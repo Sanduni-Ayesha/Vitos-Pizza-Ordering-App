@@ -2,6 +2,8 @@ package com.vitos.pizza.service;
 
 import com.vitos.pizza.dto.UserDto;
 import com.vitos.pizza.dto.UserLoginDto;
+import com.vitos.pizza.exception.Exceptions;
+import com.vitos.pizza.exception.ResponseStatusCodes;
 import com.vitos.pizza.model.User;
 import com.vitos.pizza.repository.UserRepository;
 import org.modelmapper.ModelMapper;
@@ -23,7 +25,7 @@ public class UserService {
     public UserDto getUserByName(UserLoginDto userLoginDto) {
         User user = userRepository.findByUserName(userLoginDto.getUserName());
         if (user == null) {
-            return null;
+            throw new Exceptions(ResponseStatusCodes.USER_NOT_FOUND);
         } else {
             if (user.getPassword().equals(userLoginDto.getPassword())) {
                 return modelMapper.map(user, UserDto.class);
